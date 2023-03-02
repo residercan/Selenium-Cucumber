@@ -3,17 +3,22 @@ package runners;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "./src/test/resources/features", //features folder path
-        glue = "stepdefinitions", //stepdefinitions path
-        tags = "@Scenario_Outline_1",
+        plugin = {
+                "pretty",//raporlarin daha okunakli olmasi icin
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"
+        },
+        monochrome = true,//raporlarin consoleda okunakli sekilde cikmasi icin
+        features = "./src/test/resources/features",//features folder path
+        glue = "stepdefinitions",   //stepdefinitions path
+        tags = "@data_tables",
         dryRun = false
 )
 public class Runner {
-
 }
-
-// Bu sınıf Test Case'leri RUN etmek için kullanılır
-// Ve konfigurasyonlar için kullanılır.
+//Bu sinif Test caseleri RUN etmek icin kullanilir
+//Ve konfigurasyonlar icin kullanilir
+//Runner class, features file lar ile step defitions i birbirile baglar

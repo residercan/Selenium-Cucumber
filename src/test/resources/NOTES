@@ -39,3 +39,45 @@ Feature: ilk feature file
     public WebElement popUpAccept;
     @FindBy(name = "q")
     public WebElement searchBox;
+---------Scenario Outline-----------------
+#Scenario -> Scenario Outline
+#"" -> "<sutun_ismi>"
+#Example kelimesi Scenario Outline dan sonra kullanilmali
+#Example verilerin kullanildagi yerdir
+----------
+Scenario Outline Data Driven Testing icin kullanilir
+Yani benzer scenarioyu tekrar tekrar farkli datalarda calistirmak icin kullanilir
+Scenario Outline cucumber cok Onemlidir.
+Ne zaman birden fazla data ile islem yaparsak, zaman scenario outline kullanabiliriz.
+Scenario Outline Excel ile atomasyon yapmaya benzer, tek fark, kullanimi daha kolaydir
+
+
+----------------------------------------------------------------
+Scenari Outline ile DDT yapılabilir. Scenario Outline iyi bilinmelidir.
+Test adimlarini(STEPS) data reusable yapmak icin kullanilir
+En çok kullanılan cucumber ozelliklerinden biridir
+Examples kelisi veri girisleri icin kullanilmalidir
+Step definitionslardaki data tipi STRINGdir
+Examples kelimesi en sonda kullanilir
+
+Data Tables ile DDT yapılabilir
+Test adimlarini(STEPS) data reusable yapmak icin kullanilir
+Scenari Outline kadar yaygın degildir
+Examples kelimesi kullanılmaz
+Step definitionslardaki data tipi DATATABLE
+DataTablelar ara adimlardada(STEPS) kullanilabilir
+
+NOT: Datatables ve Scenario Outline birlikle kullanilabilir
+
+----------------------------------------------------------------
+
+Collectionslar nelerdir? -> list, set, queue
+Collectionslari frameworkunde nasıl kullandın? -> Collectionslari ozellikle coklu data ihtiyacimiz oldugunda kullanırız.
+Ornegin, findElements metotu kullanildiginda birden fazla element beklediğim icin, List<WebElement> kullanırız.
+Yada, çoklu pencere geçişlerinde getWindowHandles ile Set kullanırız.
+Dropdowndaki tum elementleri getOptions metot ile aldigimda List<WebElement> e koyariz.
+Frameforkumuzde bazı utility classlar kullanıyoruz. Bunlarin icince çok sayıda collections kullanıyoruz. Ornegin ExcelUtils datalarını list e koyan metotlarımız vardır.
+Cucumberda DataTables kullandigimda, gelen verileri List yada Map de depolayabiliriz.
+
+----------------------------------------------------------------
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="4.119" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="data_tables" name="TC01_musteri_giris_testi" time="4.005">
+<system-out><![CDATA[
+Given kullanici "https://www.bluerentalcars.com/login" gider................passed
+When kullanici emaili ve sifresini girer....................................passed
+]]></system-out>
+</testcase>
+</testsuite>
